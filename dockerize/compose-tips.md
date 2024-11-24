@@ -45,3 +45,8 @@ If it can’t find a value, docker-compose will look for values inside of the pr
 5. Variable is not defined
 
 [More Info](https://vsupalov.com/override-docker-compose-dot-env/)
+
+## Best Practices
+
+- [Building best practices](https://docs.docker.com/build/building/best-practices/) 
+- [Best practices for working with environment variables in Docker Compose](https://docs.docker.com/compose/how-tos/environment-variables/best-practices/)
