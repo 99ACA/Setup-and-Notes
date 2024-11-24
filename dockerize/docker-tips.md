@@ -53,3 +53,10 @@
 ## Security
 
 - [Securely using .npmrc files, example](https://www.alexandraulsh.com/2018/06/25/docker-npmrc-security/)
+
+
+## Best Practices
+
+- [Building best practices](https://docs.docker.com/build/building/best-practices/) 
+  -  The distinction between CMD "..." (Shell Form) and CMD ["..."] (Exec Form) lies in how they handle command execution, signals, and process management within Docker containers. Best practices strongly recommend using the Exec Form (CMD ["..."]) for most cases due to its predictable behavior and better integration with container runtime environments.
+- [Best practices for working with environment variables in Docker Compose](https://docs.docker.com/compose/how-tos/environment-variables/best-practices/)
