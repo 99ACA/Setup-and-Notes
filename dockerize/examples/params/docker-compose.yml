@@ -1,0 +1,33 @@
+version: "3"
+services:
+  arg:
+    container_name: arg
+    image: arg:latest
+    init: true
+    build: 
+      context: .
+      dockerfile: ./ARG.Dockerfile
+      args:
+        - PORT=21777
+    # ports:
+    #   - "21444:21444"
+    networks:
+      - example  
+    # environment:
+    #   PORT: ${ARG_PORT}
+  env:
+    container_name: env
+    image: env:latest
+    build: 
+      context: .
+      dockerfile: ./ENV.Dockerfile
+    # ports:
+    #   - "5000:5000"
+    environment:
+      PORT: ${ENV_PORT:?"ENV PORT is unset"}
+    networks:
+      - example
+
+networks:
+  example:
+    driver: bridge
